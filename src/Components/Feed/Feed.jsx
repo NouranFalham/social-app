@@ -8,6 +8,7 @@ export default function Feed({posts}) {
     
     return (
         <>
+        
             <section className="py-10 px-5">
                 <div className="container mx-auto max-w-2xl">
                     <h2 className="text-2xl font-semibold text-gray-600">Latest Posts</h2>

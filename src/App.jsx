@@ -10,6 +10,7 @@ import NotFound from "./pages/NotFound/NotFound";
 import AuthProvider from "./assets/Context/Auth.context/Auth.context";
 import ProtectedRoute from "./Components/ProtectedRoute/ProtectedRoute";
 import AuthRoute from "./Components/AuthRoute/AuthRoute";
+import UserContextProvider from "./assets/Context/User.context/User.context";
 
 function App() {
 
@@ -25,6 +26,7 @@ function App() {
   return (
     <>
       <AuthProvider>
+        <UserContextProvider>
         <RouterProvider router={router}/>
         <ToastContainer
         position="top-right"
@@ -39,6 +41,7 @@ function App() {
         theme="colored"
         transition={Bounce}
       />
+      </UserContextProvider>
       </AuthProvider>
     </>
   );

@@ -14,6 +14,7 @@ import axios from "axios";
 import { useContext } from "react";
 import { AuthContext } from "../../assets/Context/Auth.context/Auth.context";
 import DropDown from "../DropDown/DropDown";
+import { UserContext } from "../../assets/Context/User.context/User.context";
 
 
     export default function  PostCard({ postInfo, commentsLimit = 3 }) {
@@ -23,7 +24,7 @@ import DropDown from "../DropDown/DropDown";
         const [comments , setComments] = useState(postInfo.comments || [])
         const {token}= useContext(AuthContext);
         const commentInputRef = useRef(null);
-
+        const {user} = useContext(UserContext);
 
         async function addComment(e) {
         try {
